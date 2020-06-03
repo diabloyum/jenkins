@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15772dc7-5ee9-4486-b8ed-6fb5e52713ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/example/demo/controller/testController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/example/demo/controller/testController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,16 +91,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.75028765" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="D:\gitproject\manage\ProjectOrder\web\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitproject\manage\ProjectOrder" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -144,7 +144,7 @@
       <workItem from="1590882448846" duration="7916000" />
       <workItem from="1590999555334" duration="8322000" />
       <workItem from="1591104116962" duration="3177000" />
-      <workItem from="1591154203552" duration="762000" />
+      <workItem from="1591154203552" duration="4427000" />
     </task>
     <servers />
   </component>
@@ -169,10 +169,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="229" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.720@0.0.1280.720" timestamp="1590833285403" />
-    <state x="323" y="101" key="FileChooserDialogImpl" timestamp="1590884046850">
+    <state x="323" y="101" key="FileChooserDialogImpl" timestamp="1591161389045">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="323" y="101" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1590884046850" />
+    <state x="323" y="101" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1591161389045" />
     <state x="465" y="274" width="375" height="173" key="Github.CreateGistDialog" timestamp="1590825741997">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -209,17 +209,17 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="1144" height="152" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1591153493094" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1591154264776">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1591161462625">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1591154264776" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1591161462625" />
     <state x="325" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1590999696567">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="325" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1590999696567" />
-    <state x="28" y="62" key="new project wizard" timestamp="1591006791949">
+    <state x="28" y="62" key="new project wizard" timestamp="1591161389816">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="28" y="62" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1591006791949" />
+    <state x="28" y="62" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1591161389816" />
   </component>
 </project>
