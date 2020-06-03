@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15772dc7-5ee9-4486-b8ed-6fb5e52713ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/proxy.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/e2e/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/e2e/protractor.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/e2e/src/app.po.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/example/demo/controller/testController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/example/demo/controller/testController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +17,36 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@120.78.220.185" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@120.78.220.185" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@120.78.220.185" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="newyear: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/spring">
@@ -53,7 +74,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/web" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -66,22 +87,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="azure&#10;mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
-    <property name="ts.external.directory.path" value="D:\gitproject\outsourcing\order\web\node_modules\typescript\lib" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.75028765" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="D:\gitproject\manage\ProjectOrder\web\node_modules\typescript\lib" />
   </component>
   <component name="RunManager">
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -117,56 +141,85 @@
       <workItem from="1590752321124" duration="10971000" />
       <workItem from="1590823260945" duration="1120000" />
       <workItem from="1590825694006" duration="2660000" />
+      <workItem from="1590882448846" duration="7916000" />
+      <workItem from="1590999555334" duration="8322000" />
+      <workItem from="1591104116962" duration="3177000" />
+      <workItem from="1591154203552" duration="762000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/web" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="198" y="26" key="#Project_Structure" timestamp="1591154272826">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="198" y="26" key="#Project_Structure/0.0.1280.720@0.0.1280.720" timestamp="1591154272826" />
+    <state x="165" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591104243357">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="165" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1591104243357" />
     <state x="229" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590833285403">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="229" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.720@0.0.1280.720" timestamp="1590833285403" />
+    <state x="323" y="101" key="FileChooserDialogImpl" timestamp="1590884046850">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="323" y="101" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1590884046850" />
     <state x="465" y="274" width="375" height="173" key="Github.CreateGistDialog" timestamp="1590825741997">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="465" y="274" width="375" height="173" key="Github.CreateGistDialog/0.0.1280.720@0.0.1280.720" timestamp="1590825741997" />
-    <state width="1237" height="272" key="GridCell.Tab.0.bottom" timestamp="1590766682095">
+    <state width="1144" height="152" key="GridCell.Tab.0.bottom" timestamp="1591153493094">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1590766682095" />
-    <state width="1237" height="272" key="GridCell.Tab.0.center" timestamp="1590766682095">
+    <state width="1144" height="152" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1591153493094" />
+    <state width="1144" height="152" key="GridCell.Tab.0.center" timestamp="1591153493093">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1590766682095" />
-    <state width="1237" height="272" key="GridCell.Tab.0.left" timestamp="1590766682095">
+    <state width="1144" height="152" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1591153493093" />
+    <state width="1144" height="152" key="GridCell.Tab.0.left" timestamp="1591153493093">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1590766682095" />
-    <state width="1237" height="272" key="GridCell.Tab.0.right" timestamp="1590766682095">
+    <state width="1144" height="152" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1591153493093" />
+    <state width="1144" height="152" key="GridCell.Tab.0.right" timestamp="1591153493093">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1590766682095" />
-    <state width="1237" height="272" key="GridCell.Tab.1.bottom" timestamp="1590766682096">
+    <state width="1144" height="152" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1591153493093" />
+    <state width="1144" height="152" key="GridCell.Tab.1.bottom" timestamp="1591153493094">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1590766682096" />
-    <state width="1237" height="272" key="GridCell.Tab.1.center" timestamp="1590766682096">
+    <state width="1144" height="152" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1591153493094" />
+    <state width="1144" height="152" key="GridCell.Tab.1.center" timestamp="1591153493094">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1590766682096" />
-    <state width="1237" height="272" key="GridCell.Tab.1.left" timestamp="1590766682095">
+    <state width="1144" height="152" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1591153493094" />
+    <state width="1144" height="152" key="GridCell.Tab.1.left" timestamp="1591153493094">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1590766682095" />
-    <state width="1237" height="272" key="GridCell.Tab.1.right" timestamp="1590766682096">
+    <state width="1144" height="152" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1591153493094" />
+    <state width="1144" height="152" key="GridCell.Tab.1.right" timestamp="1591153493094">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="272" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1590766682096" />
-    <state x="325" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1590823780680">
+    <state width="1144" height="152" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1591153493094" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1591154264776">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="325" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1590823780680" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1591154264776" />
+    <state x="325" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1590999696567">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="325" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1590999696567" />
+    <state x="28" y="62" key="new project wizard" timestamp="1591006791949">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="28" y="62" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1591006791949" />
   </component>
 </project>
