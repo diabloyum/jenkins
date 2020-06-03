@@ -1,0 +1,150 @@
+<p-toast [style]="{ marginTop: '80px' }"></p-toast>
+<div class="ui-fluid">
+    <p-card header="个人信息">
+        <div class="ui-g">
+            <div class="ui-g-12 ui-md-12 ui-lg-12">
+                <div>
+                    <label><span style="color:red;">* </span>账户:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="add.account"
+                        size="40"
+                        class="inputText"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g">
+            <div class="ui-g-12 ui-md-8 ui-lg-8">
+                <div>
+                    <label><span style="color:red;">* </span>密码:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="add.password"
+                        size="40"
+                        class="inputText"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g">
+            <div class="ui-g-12 ui-md-8 ui-lg-8">
+                <div>
+                    <label><span style="color:red;">* </span>姓名:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="add.name"
+                        size="40"
+                        class="inputText"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g" *ngIf="userInfo.act == 2">
+            <div class="ui-g-12 ui-md-8 ui-lg-8">
+                <div>
+                    <label><span style="color:red;">* </span>余额:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="userInfo.money"
+                        size="40"
+                        class="inputText"
+                        [readOnly]="true"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g" *ngIf="userInfo.act == 2">
+            <div class="ui-g-12 ui-md-8 ui-lg-8">
+                <div>
+                    <label><span style="color:red;">* </span>钱包:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="money"
+                        size="40"
+                        class="inputText"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g" *ngIf="userInfo.act == 1">
+            <div class="ui-g-12 ui-md-8 ui-lg-8">
+                <div>
+                    <label><span style="color:red;">* </span>车牌号:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="add.car"
+                        size="40"
+                        class="inputText"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g" *ngIf="userInfo.act == 2">
+            <div class="ui-g-12 ui-md-8 ui-lg-8">
+                <div>
+                    <label><span style="color:red;">* </span>地址:</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        pInputText
+                        [(ngModel)]="add.address"
+                        size="40"
+                        class="inputText"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="ui-g">
+            <div class="ui-g-12 ui-md-4 ui-lg-4">
+                <button
+                    pButton
+                    type="button"
+                    class="ui-button-info button"
+                    (click)="onSubmit()"
+                    [disabled]="validate()"
+                    label="修改"
+                ></button>
+            </div>
+            <div class="ui-g-12 ui-md-4 ui-lg-4">
+                <button
+                    pButton
+                    type="button"
+                    class="ui-button-info button"
+                    (click)="onDelete()"
+                    label="注销账户"
+                ></button>
+            </div>
+            <div class="ui-g-12 ui-md-4 ui-lg-4" *ngIf="userInfo.act == 2">
+                <button
+                        pButton
+                        type="button"
+                        class="ui-button-info button"
+                        (click)="onSubmitMoney()"
+                        [disabled]="validateMoney()"
+                        label="充值"
+                ></button>
+            </div>
+        </div>
+    </p-card>
+</div>
+<p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>
