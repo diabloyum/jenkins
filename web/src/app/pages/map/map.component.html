@@ -1,0 +1,81 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-2 ui-lg-2">
+        <input type="text" pInputText [(ngModel)]="start" (ngModelChange)="searchCity()" placeholder="起始地点">
+    </div>
+    <div class="ui-g-12 ui-md-4 ui-lg-4">
+        <p-dropdown
+            [options]="address"
+            [(ngModel)]="add.address"
+            placeholder="选择城市"
+            optionLabel="label"
+            [showClear]="true"
+            id="cid"
+            (ngModelChange)="startLocation()"
+        ></p-dropdown>
+    </div>
+    <div class="ui-g-12 ui-md-2 ui-lg-2">
+        <input type="text" pInputText [(ngModel)]="end" (ngModelChange)="searchCityEnd()" placeholder="到达地点">
+    </div>
+    <div class="ui-g-12 ui-md-4 ui-lg-4">
+        <p-dropdown
+            [options]="addressEnd"
+            [(ngModel)]="add.addressEnd"
+            placeholder="选择城市"
+            [showClear]="true"
+            optionLabel="label"
+            id="end"
+            (ngModelChange)="endLocation()"
+        ></p-dropdown>
+    </div>
+    <div class="ui-g-12 ui-md-2 ui-lg-2" *ngIf="userInfo.act == 2">
+        <button type="button" pButton (click)="showDialogToAdd()" label="叫车"></button>
+    </div>
+</div>
+<!--<div id="wrap" class="my-map" >-->
+<!--    <div id="mapContainer" ></div>-->
+<!--</div>-->
+<div id="container" style="width: 800px; height: 600px">
+
+</div>
+<!--<div id="container" class="map" tabindex="0"></div>-->
+<!--<div id="pickerBox">-->
+<!--    <input id="pickerInput" placeholder="输入关键字选取地点" />-->
+<!--    <div id="poiInfo"></div>-->
+<!--</div>-->
+<p-dialog header="详情" [(visible)]="displayDialog" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true"  [style]="{width: '300px'}">
+    <div class="ui-g ui-fluid" *ngIf="data">
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="count">起始位置</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="count" [(ngModel)]="data['startname']" [readOnly]="true"/>
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="endname">到达地点</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="endname" [(ngModel)]="data['endname']" [readOnly]="true"/>
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="cost">预估价格</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="cost" [(ngModel)]="data['cost']" />
+            </div>
+        </div>
+    </div>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="pi pi-check" (click)="call()" label="下单"></button>
+        </div>
+    </p-footer>
+</p-dialog>
+
+<p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>

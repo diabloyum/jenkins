@@ -1,0 +1,76 @@
+<div class="topbar clearfix">
+    <div class="topbar-left">
+            <h3>网约车系统</h3>
+<!--            <img class="topbar-logo" src="assets/layout/images/avalon.png" />-->
+    </div>
+
+    <div class="topbar-right">
+        <a (click)="pagesComponent.onMenuButtonClick($event)"
+            [ngClass]="{'menu-button-rotate': pagesComponent.rotateMenuButton}" href="#" id="menu-button">
+            <i class="fa fa-angle-left"></i>
+        </a>
+
+        <a (click)="pagesComponent.onTopbarMenuButtonClick($event)" href="#" id="topbar-menu-button">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <ul [ngClass]="{'topbar-items-visible': pagesComponent.topbarMenuActive}" class="topbar-items fadeInDown">
+            <li #profile *ngIf="pagesComponent.profileMode==='top'"
+                [ngClass]="{'active-top-menu':pagesComponent.activeTopbarItem === profile}" class="profile-item">
+
+                <a (click)="pagesComponent.onTopbarItemClick($event,profile)" href="#">
+                    <img class="profile-image" src="assets/layout/images/avatar.png" />
+<!--                    <span class="topbar-item-name">{{user.userModel.displayUsername}}</span>-->
+                </a>
+
+                <ul class="layout-menu fadeInDown">
+                    <li role="menuitem">
+                        <a (click)="pagesComponent.onTopbarSubItemClick($event, 'navigateToProfile')" href="#">
+                            <i class="fa fa-fw fa-user"></i>
+                            <span>个人信息</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a (click)="pagesComponent.onLogoutClick($event)" href="#">
+                            <i class="fa fa-fw fa-sign-out"></i>
+                            <span>登出</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li
+                #users
+                [ngClass]="{
+                    'active-top-menu':
+                        pagesComponent.activeTopbarItem === users
+                }"
+            >
+                <a
+                    (click)="pagesComponent.onOpenUserState($event, users)"
+                    href="#"
+                >
+                    <i
+                        class="topbar-icon animated swing fa fa-fw fa-user"
+                    ></i>
+                    <span class="topbar-badge animated rubberBand"></span>
+                    <span class="topbar-item-name">Messages</span>
+                </a>
+                <ul class="layout-menu fadeInDown">
+                    <div class="dashboard">
+                        <div class="contacts">
+                            <li role="menuitem" class="clearfix" *ngFor="let item of pagesComponent.allUserInfo" >
+                                <div class="contact-info" (click)="pagesComponent.onOpenChat(item)"
+                                    *ngIf="item.uid != pagesComponent.myId">
+                                    <span class="name">{{item.name}}</span>
+                                    <span class="location" style="margin-left: 10px">{{item.mobile}}</span>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+<!--        <p-button (click)="changeLanguage()" class="topbar-items fadeInDown change-language-btn" type="button">-->
+<!--            {{ language }}</p-button>-->
+    </div>
+</div>
