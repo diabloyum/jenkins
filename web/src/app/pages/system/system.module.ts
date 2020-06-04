@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CardModule } from 'primeng/primeng';
 import { routedComponents, SystemRoutingModule } from './system-routing.module';
+import { ReferenceManagementComponent } from './reference-management/reference-management.component';
 
 @NgModule({
     imports: [
@@ -11,7 +12,8 @@ import { routedComponents, SystemRoutingModule } from './system-routing.module';
         CardModule
     ],
     declarations: [
-        ...routedComponents
+        ...routedComponents,
+        ReferenceManagementComponent
     ],
     providers: []
 })
