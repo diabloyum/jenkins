@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.mapper.ProductInfoDao">
+  <resultMap id="BaseResultMap" type="com.example.demo.dao.model.ProductInfo">
+    <id column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="product_core" jdbcType="INTEGER" property="productCore" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="one_category_id" jdbcType="INTEGER" property="oneCategoryId" />
+    <result column="two_category_id" jdbcType="INTEGER" property="twoCategoryId" />
+    <result column="three_category_id" jdbcType="INTEGER" property="threeCategoryId" />
+    <result column="price" jdbcType="VARCHAR" property="price" />
+    <result column="publish_status" jdbcType="INTEGER" property="publishStatus" />
+    <result column="audit_status" jdbcType="INTEGER" property="auditStatus" />
+    <result column="publish_time" jdbcType="TIMESTAMP" property="publishTime" />
+    <result column="userful_start" jdbcType="DATE" property="userfulStart" />
+    <result column="userful_end" jdbcType="DATE" property="userfulEnd" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
+    <result column="prodect_desc" jdbcType="VARCHAR" property="prodectDesc" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    product_id, product_core, product_name, one_category_id, two_category_id, three_category_id, 
+    price, publish_status, audit_status, publish_time, userful_start, userful_end, modified_time, 
+    prodect_desc
+  </sql>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from product_info
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product_info
+    where product_id = #{productId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from product_info
+    where product_id = #{productId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="product_id" keyProperty="productId" parameterType="com.example.demo.dao.model.ProductInfo" useGeneratedKeys="true">
+    insert into product_info (product_core, product_name, one_category_id, 
+      two_category_id, three_category_id, price, 
+      publish_status, audit_status, publish_time, 
+      userful_start, userful_end, modified_time, 
+      prodect_desc)
+    values (#{productCore,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, #{oneCategoryId,jdbcType=INTEGER},
+      #{twoCategoryId,jdbcType=INTEGER}, #{threeCategoryId,jdbcType=INTEGER}, #{price,jdbcType=VARCHAR}, 
+      #{publishStatus,jdbcType=INTEGER}, #{auditStatus,jdbcType=INTEGER}, #{publishTime,jdbcType=TIMESTAMP}, 
+      #{userfulStart,jdbcType=DATE}, #{userfulEnd,jdbcType=DATE}, #{modifiedTime,jdbcType=TIMESTAMP}, 
+      #{prodectDesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="product_id" keyProperty="productId" parameterType="com.example.demo.dao.model.ProductInfo" useGeneratedKeys="true">
+    insert into product_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="productCore != null">
+        product_core,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="oneCategoryId != null">
+        one_category_id,
+      </if>
+      <if test="twoCategoryId != null">
+        two_category_id,
+      </if>
+      <if test="threeCategoryId != null">
+        three_category_id,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="publishStatus != null">
+        publish_status,
+      </if>
+      <if test="auditStatus != null">
+        audit_status,
+      </if>
+      <if test="publishTime != null">
+        publish_time,
+      </if>
+      <if test="userfulStart != null">
+        userful_start,
+      </if>
+      <if test="userfulEnd != null">
+        userful_end,
+      </if>
+      <if test="modifiedTime != null">
+        modified_time,
+      </if>
+      <if test="prodectDesc != null">
+        prodect_desc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="productCore != null">
+        #{productCore,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="oneCategoryId != null">
+        #{oneCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="twoCategoryId != null">
+        #{twoCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="threeCategoryId != null">
+        #{threeCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="publishStatus != null">
+        #{publishStatus,jdbcType=INTEGER},
+      </if>
+      <if test="auditStatus != null">
+        #{auditStatus,jdbcType=INTEGER},
+      </if>
+      <if test="publishTime != null">
+        #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userfulStart != null">
+        #{userfulStart,jdbcType=DATE},
+      </if>
+      <if test="userfulEnd != null">
+        #{userfulEnd,jdbcType=DATE},
+      </if>
+      <if test="modifiedTime != null">
+        #{modifiedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="prodectDesc != null">
+        #{prodectDesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.dao.model.ProductInfo">
+    update product_info
+    <set>
+      <if test="productCore != null">
+        product_core = #{productCore,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="oneCategoryId != null">
+        one_category_id = #{oneCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="twoCategoryId != null">
+        two_category_id = #{twoCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="threeCategoryId != null">
+        three_category_id = #{threeCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="publishStatus != null">
+        publish_status = #{publishStatus,jdbcType=INTEGER},
+      </if>
+      <if test="auditStatus != null">
+        audit_status = #{auditStatus,jdbcType=INTEGER},
+      </if>
+      <if test="publishTime != null">
+        publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userfulStart != null">
+        userful_start = #{userfulStart,jdbcType=DATE},
+      </if>
+      <if test="userfulEnd != null">
+        userful_end = #{userfulEnd,jdbcType=DATE},
+      </if>
+      <if test="modifiedTime != null">
+        modified_time = #{modifiedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="prodectDesc != null">
+        prodect_desc = #{prodectDesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where product_id = #{productId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.dao.model.ProductInfo">
+    update product_info
+    set product_core = #{productCore,jdbcType=INTEGER},
+      product_name = #{productName,jdbcType=VARCHAR},
+      one_category_id = #{oneCategoryId,jdbcType=INTEGER},
+      two_category_id = #{twoCategoryId,jdbcType=INTEGER},
+      three_category_id = #{threeCategoryId,jdbcType=INTEGER},
+      price = #{price,jdbcType=VARCHAR},
+      publish_status = #{publishStatus,jdbcType=INTEGER},
+      audit_status = #{auditStatus,jdbcType=INTEGER},
+      publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      userful_start = #{userfulStart,jdbcType=DATE},
+      userful_end = #{userfulEnd,jdbcType=DATE},
+      modified_time = #{modifiedTime,jdbcType=TIMESTAMP},
+      prodect_desc = #{prodectDesc,jdbcType=VARCHAR}
+    where product_id = #{productId,jdbcType=BIGINT}
+  </update>
+</mapper>

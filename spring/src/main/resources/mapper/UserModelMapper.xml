@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.mapper.UserModelMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.dao.model.UserModel">
+    <id column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="act" jdbcType="INTEGER" property="act" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="active" jdbcType="BOOLEAN" property="active" />
+    <result column="phone" jdbcType="BIGINT" property="phone" />
+    <result column="mobile" jdbcType="BIGINT" property="mobile" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    `uid`, `name`, act, account, `password`,  active, email, mobile,phone
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where `uid` = #{uid,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+  </select>
+  <select id="login" parameterType="com.example.demo.dao.model.UserModel" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where account = #{account,jdbcType=VARCHAR}
+    or email = #{account,jdbcType=VARCHAR}
+    or mobile = #{account,jdbcType=VARCHAR}
+    and password = #{password,jdbcType=VARCHAR}
+  </select>
+  <select id="recovery" parameterType="com.example.demo.dao.model.UserModel" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where account = #{account,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByAccount" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where account = #{account,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from user
+    where `uid` = #{uid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="uid" keyProperty="uid" parameterType="com.example.demo.dao.model.UserModel" useGeneratedKeys="true">
+    insert into user (`name`, act,account, `password`,
+        mobile,
+      email)
+    values (#{name,jdbcType=VARCHAR}, #{act,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR},
+      #{password,jdbcType=VARCHAR}, #{mobile,jdbcType=BIGINT},
+      #{email,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="uid" keyProperty="uid" parameterType="com.example.demo.dao.model.UserModel" useGeneratedKeys="true">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+
+      <if test="account != null">
+        account,
+      </if>
+      <if test="password != null">
+        `password`,
+      </if>
+      <if test="act != null">
+        act,
+      </if>
+      <if test="active != null">
+        active,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="act != null">
+        #{act,jdbcType=INTEGER},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="active != null">
+        #{active,jdbcType=BOOLEAN},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=BIGINT},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.dao.model.UserModel">
+    update user
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="act != null">
+        act = #{act,jdbcType=INTEGER},
+      </if>
+      <if test="account != null">
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        `password` = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="active != null">
+        active = #{active,jdbcType=BOOLEAN},
+      </if>
+      <if test="email != null">
+        `car` = #{car,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=BIGINT},
+      </if>
+      <if test="phone != null">
+        `address` = #{address,jdbcType=BIGINT},
+      </if>
+    </set>
+    where `uid` = #{uid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.dao.model.UserModel">
+    update user
+    set `name` = #{name,jdbcType=VARCHAR},
+      act = #{act,jdbcType=INTEGER},
+      account = #{account,jdbcType=VARCHAR},
+      `password` = #{password,jdbcType=VARCHAR},
+      active = #{active,jdbcType=BOOLEAN},
+      `email` = #{car,jdbcType=VARCHAR},
+      `phone` = #{address,jdbcType=BIGINT},
+       mobile = #{mobile,jdbcType=BIGINT}
+    where `uid` = #{uid,jdbcType=BIGINT}
+  </update>
+</mapper>

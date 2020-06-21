@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.mapper.ProductPicInfoDao">
+  <resultMap id="BaseResultMap" type="com.example.demo.dao.model.ProductPicInfo">
+    <id column="product_pic_id" jdbcType="BIGINT" property="productPicId" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="pic_desc" jdbcType="VARCHAR" property="picDesc" />
+    <result column="pic_url" jdbcType="VARCHAR" property="picUrl" />
+    <result column="is_master" jdbcType="INTEGER" property="isMaster" />
+    <result column="pic_order" jdbcType="INTEGER" property="picOrder" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    product_pic_id, product_id, pic_desc, pic_url, is_master, pic_order, modified_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product_pic_info
+    where product_pic_id = #{productPicId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from product_pic_info
+    where product_pic_id = #{productPicId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="product_pic_id" keyProperty="productPicId" parameterType="com.example.demo.dao.model.ProductPicInfo" useGeneratedKeys="true">
+    insert into product_pic_info (product_id, pic_desc, pic_url, 
+      is_master, pic_order, modified_time
+      )
+    values (#{productId,jdbcType=BIGINT}, #{picDesc,jdbcType=VARCHAR}, #{picUrl,jdbcType=VARCHAR}, 
+      #{isMaster,jdbcType=INTEGER}, #{picOrder,jdbcType=INTEGER}, #{modifiedTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="product_pic_id" keyProperty="productPicId" parameterType="com.example.demo.dao.model.ProductPicInfo" useGeneratedKeys="true">
+    insert into product_pic_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="picDesc != null">
+        pic_desc,
+      </if>
+      <if test="picUrl != null">
+        pic_url,
+      </if>
+      <if test="isMaster != null">
+        is_master,
+      </if>
+      <if test="picOrder != null">
+        pic_order,
+      </if>
+      <if test="modifiedTime != null">
+        modified_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="productId != null">
+        #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="picDesc != null">
+        #{picDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="picUrl != null">
+        #{picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isMaster != null">
+        #{isMaster,jdbcType=INTEGER},
+      </if>
+      <if test="picOrder != null">
+        #{picOrder,jdbcType=INTEGER},
+      </if>
+      <if test="modifiedTime != null">
+        #{modifiedTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.dao.model.ProductPicInfo">
+    update product_pic_info
+    <set>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="picDesc != null">
+        pic_desc = #{picDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="picUrl != null">
+        pic_url = #{picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isMaster != null">
+        is_master = #{isMaster,jdbcType=INTEGER},
+      </if>
+      <if test="picOrder != null">
+        pic_order = #{picOrder,jdbcType=INTEGER},
+      </if>
+      <if test="modifiedTime != null">
+        modified_time = #{modifiedTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where product_pic_id = #{productPicId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.dao.model.ProductPicInfo">
+    update product_pic_info
+    set product_id = #{productId,jdbcType=BIGINT},
+      pic_desc = #{picDesc,jdbcType=VARCHAR},
+      pic_url = #{picUrl,jdbcType=VARCHAR},
+      is_master = #{isMaster,jdbcType=INTEGER},
+      pic_order = #{picOrder,jdbcType=INTEGER},
+      modified_time = #{modifiedTime,jdbcType=TIMESTAMP}
+    where product_pic_id = #{productPicId,jdbcType=BIGINT}
+  </update>
+</mapper>
