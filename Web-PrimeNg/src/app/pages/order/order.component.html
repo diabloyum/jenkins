@@ -1,0 +1,139 @@
+<p-toast [style]="{ marginTop: '80px' }"></p-toast>
+<p-blockUI [blocked]="blockedDocument" [target]="pc"></p-blockUI>
+<p-card #pc>
+    <p-header></p-header>
+    <div class="ui-g">
+        <div class="ui-g-12 ui-md-4 ui-lg-4">
+            订单管理
+        </div>
+        <div class="ui-g-12 ui-md-6 ui-lg-6">
+
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-lg-2">
+            <button pButton type="button" (click)="search()" label="刷新"></button>
+        </div>
+    </div>
+
+    <p-table
+        [columns]="cols"
+        [value]="datas"
+        [loading]="loading"
+        [paginator]="true"
+        [rows]="10"
+        selectionMode="single"
+        [(selection)]="selectedData"
+        (onRowSelect)="onRowSelect($event)"
+        #dt1
+    >
+        <!--        <ng-template pTemplate="caption">-->
+        <!--            <div class="ui-table-globalfilter-container">-->
+        <!--                <input type="text" pInputText size="50" placeholder="全局搜索" (input)="dt1.filterGlobal($event.target.value, 'contains')" style="width:250px;">-->
+        <!--            </div>-->
+        <!--        </ng-template>-->
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                    {{ col.header }}
+                    <p-sortIcon
+                        [field]="col.field"
+                        ariaLabel="Activate to sort"
+                        ariaLabelDesc="Activate to sort in descending order"
+                        ariaLabelAsc="Activate to sort in ascending order"
+                    ></p-sortIcon>
+                </th>
+            </tr>
+            <tr>
+                <th *ngFor="let col of columns">
+                    <input pInputText type="text" placeholder="{{col.label}}" class="ui-column-filter" style="width: 100%;"
+                           (input)="dt1.filter($event.target.value, col.field, 'contains')">
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+                <td
+                    *ngFor="let col of columns"
+                    class="thclass"
+                    title="{{ rowData[col.field] }}"
+                >
+                    <span >{{ rowData[col.field] }}</span>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary" let-rowData>
+            <div class="ui-g">
+                <div style="text-align:left" class="ui-g-12 ui-md-2 ui-lg-2">
+                    <button type="button" pButton icon="pi pi-plus" (click)="showDialogToAdd()" label="添加"></button>
+                </div>
+            </div>
+        </ng-template>
+    </p-table>
+</p-card>
+
+<p-dialog header="详情" [(visible)]="displayDialog" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true"  [style]="{width: '300px'}">
+    <div class="ui-g ui-fluid" *ngIf="data">
+        <!--        <div class="ui-g-12">-->
+        <!--            <div class="ui-g-4" *ngIf="userInfo.act != 2">-->
+        <!--                <label for="driver">司机</label>-->
+        <!--            </div>-->
+        <!--            <div class="ui-g-8" *ngIf="userInfo.act != 2">-->
+        <!--                <p-dropdown-->
+        <!--                    [options]="driver"-->
+        <!--                    [(ngModel)]="data['driver']"-->
+        <!--                    placeholder="选择司机"-->
+        <!--                    [showClear]="true"-->
+        <!--                    id="driver"-->
+        <!--                ></p-dropdown>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="ui-g-12">-->
+        <!--            <div class="ui-g-4">-->
+        <!--                <label for="count">起始位置</label>-->
+        <!--            </div>-->
+        <!--            <div class="ui-g-8">-->
+        <!--                <input pInputText id="count" [(ngModel)]="data['startname']" [readOnly]="true" />-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="ui-g-12">-->
+        <!--            <div class="ui-g-4">-->
+        <!--                <label for="end">到达地点</label>-->
+        <!--            </div>-->
+        <!--            <div class="ui-g-8">-->
+        <!--                <input pInputText id="end" [(ngModel)]="data['endname']" [readOnly]="true"/>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="comment">评价</label>
+            </div>
+            <div class="ui-g-8">
+                <input pInputText id="comment" [(ngModel)]="data['comment']" />
+            </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="wucha">订单状态</label>
+            </div>
+            <div class="ui-g-8">
+                <p-dropdown
+                    [options]="startOptions"
+                    [(ngModel)]="data['orderStart']"
+                    placeholder="选择状态"
+                    [showClear]="true"
+                    id="wucha"
+                ></p-dropdown>
+            </div>
+        </div>
+    </div>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="pi pi-times" (click)="delete()" label="删除" ></button>
+            <!--            <button type="button" pButton icon="pi pi-times" (click)="detail()" label="查看详情"></button>-->
+            <button type="button" pButton icon="pi pi-check" (click)="save()" label="保存"></button>
+            <!--            <button type="button" pButton icon="pi pi-check" (click)="edit()" label="修改行程" *ngIf="(userInfo.act == 0 ||-->
+            <!--            data['uid'] == userInfo.uid) && !data.finish"></button>-->
+        </div>
+    </p-footer>
+</p-dialog>
+
+<p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>
