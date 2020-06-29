@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="order">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="OrderDao" />
+              <option name="daoPackage" value="com.example.demo.dao.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/mapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Order" />
+              <option name="modelPackage" value="com.example.demo.dao.model" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/model/src" />
+              <option name="name" value="order" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="order_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="order" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/" />
+              <option name="xmlPackage" value="generator" />
+              <option name="xmlTargetFolder" value="D:\word\web1\web1\spring\src\main\resources\mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="product_category">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProductCategoryDao" />
+              <option name="daoPackage" value="com.example.demo.dao.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/mapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ProductCategory" />
+              <option name="modelPackage" value="com.example.demo.dao.model" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/model" />
+              <option name="name" value="product_category" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="category_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$/spring" />
+              <option name="tableName" value="product_category" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+              <option name="xmlTargetFolder" value="D:\word\web1\ProjectOrder\spring\src\main\resources\mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="product_comment">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProductCommentDao" />
+              <option name="daoPackage" value="generator" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ProductComment" />
+              <option name="modelPackage" value="generator" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/model" />
+              <option name="name" value="product_comment" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="comment_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="product_comment" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+              <option name="xmlTargetFolder" value="D:\word\web1\ProjectOrder\spring\src\main\resources\mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="product_info">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProductInfoDao" />
+              <option name="daoPackage" value="com.example.demo.dao.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/mapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ProductInfo" />
+              <option name="modelPackage" value="com.example.demo.dao.model" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/model" />
+              <option name="name" value="product_info" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="product_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$/spring" />
+              <option name="tableName" value="product_info" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+              <option name="xmlTargetFolder" value="D:\word\web1\ProjectOrder\spring\src\main\resources\mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="product_pic_info">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProductPicInfoDao" />
+              <option name="daoPackage" value="com.example.demo.dao.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/mapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ProductPicInfo" />
+              <option name="modelPackage" value="com.example.demo.dao.model" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/spring/src/main/java/com/example/demo/dao/model" />
+              <option name="name" value="product_pic_info" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="product_pic_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$/spring" />
+              <option name="tableName" value="product_pic_info" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+              <option name="xmlTargetFolder" value="D:\word\web1\ProjectOrder\spring\src\main\resources\mapper" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="users">
+      <map>
+        <entry key="jdbc:mysql://120.78.220.185:3306/yunzhi_spring">
+          <value>
+            <User>
+              <option name="username" value="yunzhi_spring" />
+            </User>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

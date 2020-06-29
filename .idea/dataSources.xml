@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@120.78.220.185" uuid="2b46f87e-6a9c-4295-ac9c-093a4b5b299d">
+    <data-source source="LOCAL" name="@120.78.220.185 [2]" uuid="850b7e28-b82f-4a48-afaf-cf0d848e36e5">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://120.78.220.185:3306/newyear</jdbc-url>
+      <jdbc-url>jdbc:mysql://120.78.220.185:3306/yunzhi_spring</jdbc-url>
     </data-source>
   </component>
 </project>

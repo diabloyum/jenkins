@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.dao.mapper.ProductCategoryDao">
@@ -95,4 +96,103 @@
       modified_time = #{modifiedTime,jdbcType=TIMESTAMP}
     where category_id = #{categoryId,jdbcType=BIGINT}
   </update>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.mapper.ProductCategoryDao">
+  <resultMap id="BaseResultMap" type="com.example.demo.dao.model.ProductCategory">
+    <id column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="category_code" jdbcType="VARCHAR" property="categoryCode" />
+    <result column="category_level" jdbcType="INTEGER" property="categoryLevel" />
+    <result column="category_status" jdbcType="INTEGER" property="categoryStatus" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    category_id, category_name, category_code, category_level, category_status, modified_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product_category
+    where category_id = #{categoryId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from product_category
+    where category_id = #{categoryId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="category_id" keyProperty="categoryId" parameterType="com.example.demo.dao.model.ProductCategory" useGeneratedKeys="true">
+    insert into product_category (category_name, category_code, category_level, 
+      category_status, modified_time)
+    values (#{categoryName,jdbcType=VARCHAR}, #{categoryCode,jdbcType=VARCHAR}, #{categoryLevel,jdbcType=INTEGER}, 
+      #{categoryStatus,jdbcType=INTEGER}, #{modifiedTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="category_id" keyProperty="categoryId" parameterType="com.example.demo.dao.model.ProductCategory" useGeneratedKeys="true">
+    insert into product_category
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="categoryName != null">
+        category_name,
+      </if>
+      <if test="categoryCode != null">
+        category_code,
+      </if>
+      <if test="categoryLevel != null">
+        category_level,
+      </if>
+      <if test="categoryStatus != null">
+        category_status,
+      </if>
+      <if test="modifiedTime != null">
+        modified_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="categoryName != null">
+        #{categoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null">
+        #{categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryLevel != null">
+        #{categoryLevel,jdbcType=INTEGER},
+      </if>
+      <if test="categoryStatus != null">
+        #{categoryStatus,jdbcType=INTEGER},
+      </if>
+      <if test="modifiedTime != null">
+        #{modifiedTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.dao.model.ProductCategory">
+    update product_category
+    <set>
+      <if test="categoryName != null">
+        category_name = #{categoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null">
+        category_code = #{categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryLevel != null">
+        category_level = #{categoryLevel,jdbcType=INTEGER},
+      </if>
+      <if test="categoryStatus != null">
+        category_status = #{categoryStatus,jdbcType=INTEGER},
+      </if>
+      <if test="modifiedTime != null">
+        modified_time = #{modifiedTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where category_id = #{categoryId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.dao.model.ProductCategory">
+    update product_category
+    set category_name = #{categoryName,jdbcType=VARCHAR},
+      category_code = #{categoryCode,jdbcType=VARCHAR},
+      category_level = #{categoryLevel,jdbcType=INTEGER},
+      category_status = #{categoryStatus,jdbcType=INTEGER},
+      modified_time = #{modifiedTime,jdbcType=TIMESTAMP}
+    where category_id = #{categoryId,jdbcType=BIGINT}
+  </update>
+>>>>>>> Stashed changes
 </mapper>
